@@ -27,6 +27,7 @@ $(function () {
     // current hour in 24-hour time?// Get current hour
 var currentHour = new Date().getHours();
 var timeBlocks = document.getElementsByClassName("time-block");
+console.log(timeBlockId)
 
 for (var i = 0; i < timeBlocks.length; i++) {
   var timeBlock = timeBlocks[i];
