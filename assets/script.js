@@ -45,8 +45,6 @@ for (var i = 0; i < timeBlocks.length; i++) {
     timeBlock.classList.add("future");
   }
 }
-console.log(currentHour)
-console.log(timeBlockId)
     //
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
