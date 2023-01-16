@@ -11,6 +11,7 @@ $(function () {
     saveBtn.addEventListener("click", function() {
     var data = document.getElementById("save").value;
     localStorage.setItem("savedData", data);
+
     });
 })
     // TODO: Add a listener for click events on the save button. This code should
@@ -27,7 +28,6 @@ $(function () {
     // current hour in 24-hour time?// Get current hour
 var currentHour = new Date().getHours();
 var timeBlocks = document.getElementsByClassName("time-block");
-console.log(timeBlockId)
 
 for (var i = 0; i < timeBlocks.length; i++) {
   var timeBlock = timeBlocks[i];
@@ -37,7 +37,7 @@ for (var i = 0; i < timeBlocks.length; i++) {
   if (timeBlockId < currentHour) {
    
     timeBlock.classList.add("past");
-  } else if (timeBlockId === currentHour) {
+  } else if (timeBlockId == currentHour) {
    
     timeBlock.classList.add("present");
   } else {
@@ -45,7 +45,8 @@ for (var i = 0; i < timeBlocks.length; i++) {
     timeBlock.classList.add("future");
   }
 }
-
+console.log(currentHour)
+console.log(timeBlockId)
     //
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
